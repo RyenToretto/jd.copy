@@ -1,0 +1,862 @@
+/*
+ * 针对不同浏览器或不同版本的浏览器会有不同的写法，会添加相应的前缀。
+ * 
+ * 　　注意：冒号与双冒号的问题，还有是否需要加上input
+ * 
+ *          1、WebKit, Blink, Edge浏览器等需要带上 -webkit- 前缀，且是双冒号，写的时候还要带上input
+ * 
+ *          2、针对火狐浏览器则有两种写法，一种是针对低版本的，一种是针对高版本的，二者都需要带上-moz-前缀。
+ *                  要点1：火狐低版本的使用冒号（：），而高版本的使用双冒 号（：：）；
+ *                  要点2：火狐浏览器不需要像webkit内核那样要带上input。
+ * 
+ *          3、由于placeholder属性只在IE10+才支持，
+ *                  因此，针对IE10、IE11的写法是加上 -ms- 前缀，使用的是冒号（：），需要带上input
+ */
+
+img {
+    border: 0 none;
+}
+
+input::-webkit-input-placeholder{
+    color: #9c9c9c;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color: #9c9c9c;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color: #9c9c9c;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color: #9c9c9c;
+}
+
+body {
+    position: relative;
+    background: #f0f3ef;
+    padding-bottom: 200px;
+}
+
+.center_heart {
+    width: 1190px;
+    margin: 0px auto;
+}
+
+li a {
+    float: left;
+}
+/******************* 右侧 fixed 导航部分*******************/
+#pos_nav {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 9999;
+    width: 6px;
+    height: 100%;
+    background-color: #7a6e6e;
+}
+
+#pos_nav #go_to_head {
+    position: fixed;
+    right: 6px;
+    bottom: 137px;
+    
+    width: 29px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background-color: #7a6e6e;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+#pos_nav #pos_nav_box {
+    position: fixed;
+    right: 6px;
+    top: 391px;
+    
+    height: 252px;
+}
+
+#pos_nav #pos_nav_box li{
+    margin-top: 1px;
+    width: 29px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #7a6e6e;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+#pos_nav #pos_nav_box li a {
+    float: none;
+    color: #fff;
+}
+
+/******************* 顶部广告部分 ************************/
+#top_adv_wrap {
+    width: 100%;
+    background-color: #282828;
+}
+
+#top_adv {
+    position: relative;
+}
+
+#exit_this {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    background-color: #0e0e0e;
+    cursor: pointer;
+}
+
+/******************* 顶部导航部分 *************************/
+#header_wrap {
+    width: 100%;
+    background: #e1e2e3;
+    border-bottom:1px solid #ddd;
+}
+
+#header_nav {
+    position: relative;
+    height: 30px;
+}
+
+/******************* 顶部左侧 导航文字*********************/
+#top_clothes {
+    margin-left: 200px;
+}
+
+#position_box {
+    /* border: 1px solid #ccc; */
+}
+
+#top_logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#user_position {
+    float: left;
+    width: 56px;
+    height: 29px;
+    
+    line-height: 29px;
+    color: #999;
+}
+
+#top_nav_box {
+    position: relative;
+    float: right;
+}
+
+#top_nav li {
+    float: left;
+    
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 11px;
+}
+
+#top_nav .hello_login{
+    padding-right: 7px;
+}
+
+#top_nav .free_register{
+    padding-left: 0px;
+}
+
+#top_nav .free_register a {
+    color: #f10215;
+}
+
+#top_nav .no_padding_li {
+    padding: 0px;
+    color: #ccc;
+}
+
+#top_nav .last_li_17_12 {
+    padding: 0px 12px 0px 17px;
+}
+
+#phone_two_box {
+    position: absolute;
+    top: 27px;
+    right: 3px;
+    width: 68px;
+    height: 71px;
+    background-color: #e3e4e5;
+}
+
+#phone_two_box #phone_two_top{
+    position: absolute;
+    top: 0px;
+    right: 28px;
+}
+
+#phone_two_box #phone_two{
+    margin-top: 3px;
+    border: 1px solid #cfcfcf;
+}
+
+/******************* 搜索栏部分 *********************/
+#search_wrap {
+    height: 140px;
+}
+
+#search_clothes {
+    margin-left: 200px;
+}
+
+#search_top_box {
+    margin: 25px 0px 0px 120px;
+}
+
+#left_search {
+    float: left;
+}
+
+/* 左上 搜索框 */
+#search_thing {
+    position: relative;
+    
+    width: 550px;
+    height: 35px;
+    margin-right: 31px;
+}
+
+#search_input {
+    float: left;
+    width: 451px;
+    height: 35px;
+    border: 0px none;
+    
+    line-height: 35px;
+    text-indent: 5px;
+    outline: none;
+}
+
+#search_icon {
+    float: left;
+    width: 49px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#search_icon span {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#search_btn {
+    float: left;
+    width: 50px;
+    height: 35px;
+    border: 0px none;
+    
+    color: #fff;
+    font-size: 18px;
+    background-color: #f10215;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 左下 导航文字 */
+#search_nav {
+    margin-top: 10px;
+}
+#search_nav ul li {
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    padding-right: 10px;
+}
+
+#search_nav ul .red_nav_li {
+    padding-right: 20px;
+}
+
+#search_nav ul .red_nav_li a{
+    color: #f10215;
+}
+
+/* 右边 购物车 */
+#right_shop_car {
+    position: relative;
+    float: left;
+    width: 188px;
+    height: 33px;
+    border: 1px solid #e3e4e5;
+    
+    color: #f10214;
+    line-height: 33px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#right_shop_car .shop_car_log{
+    font-size: 18px;
+}
+
+#right_shop_car .shop_car_count{
+    position: absolute;
+    top: 5px;
+    right: 34px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+
+    color: #fff;
+    line-height: 14px;
+    text-align: center;
+    background-color: #f10215;
+}
+
+/******************* 搜索栏下方导航部分 *********************/
+#search_bottom_box {
+    margin-top: 6px;
+}
+
+#all_nav {
+    float: left;
+}
+
+#all_nav ul {
+    width: 777px;
+    padding-top: 24px;
+}
+
+#all_nav ul li {
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    padding-left: 30px;
+}
+
+#all_nav ul .padding_left18 {
+    padding-left: 18px;
+}
+
+#time_activity {
+    float: right;
+    width: 190px;
+    height: 40px;
+}
+
+#time_activity a{
+    border-radius: 20px;
+}
+
+/******************* content 主体部分 *********************/
+#content_box {
+    position: relative;
+}
+
+/* 两侧广告 */
+#content_box #left_pos_adv,
+#content_box #right_pos_adv {
+    position: absolute;
+    top: 10px;
+    left: -260px;
+}
+
+#content_box #right_pos_adv {
+    left: auto;
+    right: -260px;
+}
+
+/******************* content 左侧导航部分 *********************/
+#content_190_left {
+    float: left;
+    width: 190px;
+    height: 480px;
+    background-color: #fff;
+}
+
+#left_nav_box {
+    padding: 13px 0px 0px 18px;
+}
+
+#left_nav_box .col_18_nav_box{
+    display: block;
+    height: 12px;
+    line-height: 12px;
+    margin-bottom: 14px;
+}
+
+.row_nav_box li {
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    color: #626262;
+}
+
+.row_nav_box .nav_line {
+    margin: 0px 2px;
+}
+/******************* content 部分 开始 *********************/
+#content_590 {
+    float: left;
+}
+
+#banner_590_470 {
+    position: relative;
+    width: 590px;
+    height: 470px;
+    margin: 10px 0px 0px 10px;
+    
+    background-color: #bdef83;
+}
+
+#banner_box li {
+    display: none;
+}
+
+#banner_box .cur_banner_590_470 {
+    display: block;
+}
+
+#pre_btn,
+#next_btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    
+    background-color: rgba(255,255,255,0.3);
+}
+
+#pre_btn:hover,
+#next_btn:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+#banner_590_470 #pre_btn {
+    left: 0px;
+}
+
+#banner_590_470 #next_btn {
+    right: 0px;
+}
+
+#banner_590_470 ol {
+    position: absolute;
+    left: 46px;
+    bottom: 20px;
+    height: 18px;
+    
+    background-color: #fff0;
+}
+
+#banner_590_470 ol li {
+    float: left;
+    line-height: 18px;
+    border-radius: 50%;
+    
+    width: 6px;
+    height: 6px;
+    margin: 4px 5px 4px 4px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+#banner_590_470 ol li:hover,
+#banner_590_470 ol .cur_btn_of_eight {
+    width: 10px;
+    height: 10px;
+    margin: 0px 1px 0px 0px;
+    border: 4px solid rgba(255,255,255,0.4);
+}
+
+#banner_590_470 ol li:hover div,
+#banner_590_470 ol .cur_btn_of_eight div {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+/******************* content 部分 3 个广告 *********************/
+#content_190_center {
+    float: left;
+    width: 190px;
+    margin-left: 10px;
+}
+
+#content_190_center .adv_190_150 {
+    width: 190px;
+    margin-top: 10px;
+}
+
+/******************* 个人导航 上面部分 *********************/
+#content_190_right {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+#person_top {
+    width: 190px;
+    height: 156px;
+    margin-top: 10px;
+    
+    background-color: #fff;
+}
+
+#person_top div {
+    width: 100%;
+    text-align: center;
+}
+
+#person_logo {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -32px;
+    
+    width: 64px;
+    height: 64px;
+}
+
+#person_logo img{
+    width: 59px;
+    height: 59px;
+    border: 5px solid #e3e1df;
+    border-radius: 50%;
+}
+
+#welcome_words {
+    margin-top: 66px;
+}
+
+#login_register {
+    margin-top: 8px;
+}
+
+#two_nav {
+    margin-top: 14px;
+}
+
+#two_nav #btn_clothes {
+    width: 150px;
+    margin: 0px auto;
+}
+
+#two_nav button {
+    float: left;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    
+    outline: none;
+    border: 0px none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#two_nav #new_guy{
+    color: #e75652;
+    background-color: #fff;
+}
+
+#two_nav #vip_user{
+    margin-left: 10px;
+    color: #d5c888;
+    background-color: #363634;
+}
+
+/******************* 个人导航 中间部分 *********************/
+#person_center {
+    height: 124px;
+    background-color: #fff;
+}
+
+#person_nav_3 {
+    width: 164px;
+    padding: 0px 13px;
+}
+
+#person_nav_3 li {
+    float: left;
+    width: 28px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#person_nav_3 .cur_nav {
+    border-bottom: 2px solid #db192b;
+}
+
+#person_nav_3 .center_line {
+    width: auto;
+    padding: 0 12px;
+}
+
+#person_nav_3 .more_nav {
+    float: right;
+}
+
+#person_nav_4 {
+    width: 160px;
+    padding: 2px 0px 12px 0px;
+    margin: 0px 15px;
+    
+    border-bottom: 1px solid #ebeaea;
+}
+
+#person_nav_4 li {
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+}
+
+/******************* 个人导航 底部 12导航部分 *********************/
+#person_bottom {
+    width: 179px;
+    height: 182px;
+    padding: 7px 0px 0px 11px;
+    
+    background-color: #fff;
+}
+
+#nav_4_3_box .nav_4_box li {
+    float: left;
+    width: 42px;
+    height: 55px;
+    text-align: center;
+}
+
+#nav_4_3_box .nav_4_box .dec_price,
+#nav_4_3_box .nav_4_box .grab_price {
+    position: relative;
+}
+
+#nav_4_3_box .nav_4_box .dec_price #dec_logo,
+#nav_4_3_box .nav_4_box .grab_price #grab_logo {
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    width: 12px;
+    height: 16px;
+    color: #fff;
+    background-color: #e01121;
+}
+
+#nav_4_3_box .nav_4_box li a span{
+    display: block;
+    width: 42px;
+    height: 20px;
+    line-height: 20px;
+    color: #bea68d;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 17px;
+}
+
+#nav_4_3_box .nav_4_box li a h3{
+    margin-top: 6px;
+    height: 12px;
+    line-height: 12px;
+    color: #bea68d;
+}
+
+#nav_4_3_box .nav_4_box li a:hover span,
+#nav_4_3_box .nav_4_box li a:hover h3 {
+    color: #e01121;
+}
+
+/******************* 秒杀部分 *********************/
+#spike_box {
+    height: 275px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+#spike_count {
+    float: left;
+    
+    width: 190px;
+    height: 275px;
+    color: #fff;
+    background-color: #e83632;
+}
+
+#spike_count div {
+    text-align: center;
+}
+
+#spike_count .jd_flash_zh {
+    margin-top: 52px;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+#spike_count .jd_flash_eng {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #f49b99;
+}
+
+#spike_count .flash_logo {
+    height: 60px;
+    line-height: 60px;
+}
+
+#spike_count .flash_logo span{
+    font-size: 33px;
+}
+
+#spike_count .flash_tips {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#spike_count .flash_count {
+    width: 130px;
+    height: 40px;
+    margin: 22px auto 0px;
+}
+
+#spike_count .flash_count div {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    
+    background-color: #2f3430;
+}
+
+#spike_count .flash_count .margin_5_count {
+    margin: 0px 5px;
+}
+
+#spike_count .flash_count div .line_through_40{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 40px;
+    height: 1px;
+    background-color: #e83632;
+}
+
+#spike_count .flash_count div .line_num{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+}
+
+#flash_photo_box {
+    float: left;
+    width: 800px;
+    height: 275px;
+}
+
+#flash_photo_box li {
+    float: left;
+    width: 199px;
+    height: 275px;
+    border-right: 1px solid #f0f0f0;
+    
+    background-color: #fff;
+}
+
+#flash_photo_box li a {
+    float: none;
+}
+
+#flash_photo_box li div {
+    width: 100%;
+}
+
+#flash_photo_box li .goods_photo_box {
+    padding: 40px 29px 20px 30px;
+}
+
+#flash_photo_box li .goods_tips_box {
+    text-align: center;
+}
+
+#flash_photo_box li .price_box {
+    width: 160px;
+    height: 20px;
+    text-align: center;
+    background-color: #e6382f;
+    margin: 18px  auto 0px;
+    padding: 1px;
+}
+
+#flash_photo_box li .price_box div {
+    float: left;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#flash_photo_box li .price_box .new_price {
+    color: #fff;
+}
+
+#flash_photo_box li .price_box .old_price {
+    color: #b7bcb8;
+    background-color: #fff;
+    text-decoration: line-through;
+}
+
+#class_flash {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 267px;
+    background-color: #fff;
+    padding: 8px 0px 0px 10px;
+}
+
+#class_flash_box li {
+    display: none;
+}
+
+#class_flash_box .cur_class {
+    display: block;
+}
+
+#class_flash #flash_ol_li{
+    position: absolute;
+    right: 86px;
+    bottom: 20px;
+}
+
+#class_flash #flash_ol_li li {
+    float: left;
+    width: 6px;
+    height: 6px;
+    background-color: #c0c0c0;
+    margin: 0px 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#class_flash #flash_ol_li li:hover,
+#class_flash #flash_ol_li .cur_class_btn {
+    background-color: #e33333;
+}

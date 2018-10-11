@@ -1,0 +1,75 @@
+/*css初始化*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,button,
+textarea,p,blockquote,th,td {
+    margin: 0;
+    padding:0; 
+}
+
+body {
+    font: 12px/1em "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\\5b8b体", sans-serif;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;    /*当前继承字号百分比*/
+}
+
+em,strong,i,b,s,del,u,ins {
+    font-style: normal; 
+    font-weight: normal;
+    text-decoration: none;
+}
+
+img { 
+    display: block;
+}
+
+ol,ul,li { 
+    list-style: none; 
+}
+
+table {
+    border-collapse: collapse;    /*设置1px表格*/
+}
+
+.clearfix {
+    *zoom:1;    /*兼容Ie6*/
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #c81623;
+}
+
+/****************** 图标字体 ***************/
+@font-face {font-family: 'iconfont';
+    src: url('../iconfont/iconfont.eot'); /* IE9*/
+    src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:12px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
